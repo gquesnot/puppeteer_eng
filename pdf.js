@@ -5,7 +5,7 @@ const puppeteer = require('puppeteer');
     const page = await browser.newPage();
     await page.goto('https://github.com');
     await page.pdf({
-        path: 'github.pdf',
+        path: 'github_pdf.pdf',
         format: 'a4'
     });
     await browser.close();

@@ -1,6 +1,5 @@
 const puppeteer = require('puppeteer');
 
-
 (async () => {
     const browser = await puppeteer.launch();
     const page = await browser.newPage();
@@ -8,11 +7,10 @@ const puppeteer = require('puppeteer');
     const result = await page.evaluate(() => {
         return document.querySelectorAll('a').length
     })
-    console.log('nb Links:', result)
+    console.log('nb Links:', result) // 49
     await page.screenshot({
-        path:'evaluate.png'
+        path:'facebook_evaluate.png'
     })
-
     await browser.close();
 })();
 

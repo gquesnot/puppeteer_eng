@@ -9,7 +9,7 @@ const puppeteer = require('puppeteer');
     let url = await(await githubSignUpLink.getProperty('href')).jsonValue()
     await page.goto(url)
     await page.screenshot({
-        path:'screenshot.png'
+        path:'github_interactions.png'
     })
 
     await browser.close();
